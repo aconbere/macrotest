@@ -1,0 +1,18 @@
+#!/usr/bin/env node
+
+var runner = require("../lib/runner").runner;
+var reporter = require("../lib/reporter").reporter;
+var Assertion = require("../lib/assertion").Assertion;
+
+process.addListener("uncaughtException", function (error) {
+  var a = new Assertion("Uncaught Exception");
+  a.failed(error);
+});
+
+process.on("exit", function () {
+  reporter.trigger("/suite/finished");
+});
+
+runner.collectTests(function (testFiles) {
+  runner.run(testFiles);
+});

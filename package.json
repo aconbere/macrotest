@@ -1,0 +1,14 @@
+{ "name" : "macrotest"
+, "description" : "A not as small assert based test runner for Node"
+, "version" : "0.0.1"
+, "author" : "Anders Conbere"
+, "repository" : { "type" : "git"
+                 , "url" : "http://github.com/botanicus/minitest.js.git"
+                 }
+, "bugs" : { "web" : "http://github.com/botanicus/minitest.js/issues" }
+, "os" : [ "linux", "darwin", "freebsd" ]
+, "directories" : { "lib" : "./lib/" }
+, "bin" : { "macrotest" : "./bin/macrotest" }
+, "main" : "./lib/macrotest"
+, "engines" : { "node" : ">=0.1.93" }
+}

@@ -1,0 +1,22 @@
+# Macrotest #
+
+It looks like BDD but isn't. It's just asserts.
+
+    describe("macrotest", function () {
+      this.before(function () {
+        this.x = 10;
+        // will run before each function
+      });
+
+      this.it("should set x to 10", function () {
+        assert.equal(this.x, 10);
+      });
+
+      this.describe("nested describes", function () {
+        this.it("should should chain down into lower describe blocks", function () {
+          assert.ok(false);
+        });
+      });
+    });
+
+
