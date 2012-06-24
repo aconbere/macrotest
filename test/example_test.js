@@ -1,4 +1,4 @@
-var sys = require("sys");
+var util = require('util');
 var assert = require("assert");
 var macrotest = require("../lib/macrotest");
 var Description = require("../lib/description").Description;
